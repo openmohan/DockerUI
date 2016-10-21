@@ -10,10 +10,11 @@ var App = React.createClass({
 			<div id="nav">
 			<Menu pageWrapId={"page-wrap"} outerContainerId={"nav"}>
 
-				 <a id="home" className="menu-item" ><Link className="menu-item"  to="/">DashBoard</Link></a>
-				<a id="home" className="menu-item" ><Link className="menu-item"  to="/Containers">Containers</Link></a>
+				 <a id="home" ><Link className="menu-item"  to="/">DashBoard</Link></a>
+				<a id="home"  ><Link className="menu-item"  to="/Containers">Containers</Link></a>
 			</Menu>
 			<div id="page-wrap">
+			<div id="title" class="title-top">Docker Manager</div>
 				{this.props.children}
 			</div>
 			</div>
