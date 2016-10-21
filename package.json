@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --hot"
+    "start": "webpack-dev-server --hot --host 0.0.0.0 --port 8080 "
   },
   "keywords": [
     "Docker",
@@ -19,10 +19,18 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
+    "docker-remote-api": "^4.4.1",
+    "file-system": "^2.2.1",
+    "fs": "0.0.1-security",
+    "isomorphic-fetch": "^2.2.1",
     "react": "^15.3.2",
     "react-burger-menu": "^1.10.8",
     "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.0",
+    "redux-thunk": "^2.1.0",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
   }

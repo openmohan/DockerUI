@@ -3,18 +3,26 @@ import { Router, Route, Link, browserHistory, IndexRoute  } from 'react-router'
 import DashBoard from './components/DashBoard.jsx'
 import Containers from './components/Containers.jsx'
 var Menu = require('react-burger-menu').push;
+import { connect } from 'react-redux'
+import {test}  from './actions/actions'
+import store from './configureStore.js'
 
+const Stores=store()
 var App = React.createClass({
+	componentDidMount: function() {
+	},
 	render: function(){
+		const {dispatch,test} = this.props
+		console.log(test)
 		return(
 			<div id="nav">
 			<Menu pageWrapId={"page-wrap"} outerContainerId={"nav"}>
 
-				 <a id="home" ><Link className="menu-item"  to="/">DashBoard</Link></a>
-				<a id="home"  ><Link className="menu-item"  to="/Containers">Containers</Link></a>
+				<div><Link className="menu-item"  to="/">DashBoard</Link></div>
+				<div><Link className="menu-item"  to="/Containers">Containers</Link></div>
 			</Menu>
 			<div id="page-wrap">
-			<div id="title" class="title-top">Docker Manager</div>
+			<div id="title" className="title-top">Docker Manager</div>
 				{this.props.children}
 			</div>
 			</div>
@@ -22,4 +30,10 @@ var App = React.createClass({
 	}
 })
 
-export default App
+function select(state){
+	return {
+		test : state.arithmetic.test
+	}
+}
+
+export default connect(select)(App)

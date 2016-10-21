@@ -103,7 +103,7 @@ border: none;
 -webkit-border-radius: 0;
 border-radius: 0;
     font: normal 26px/1 "Palatino Linotype", "Book Antiqua", Palatino, serif;
-color: rgba(82,167,170,1);
+color: rgba(12,174,249,1);
 -o-text-overflow: ellipsis;
 text-overflow: ellipsis;
 background: none;
@@ -156,4 +156,39 @@ transform-origin: 50% 50% 0;
 }
 .whole-page {
       background-color: #232121;
+}
+.title-top{
+  display: block;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+float: none;
+z-index: auto;
+width: auto;
+height: auto;
+position: static;
+cursor: pointer;
+opacity: 1;
+margin-left: 38%;
+padding: 0;
+overflow: visible;
+border: none;
+-webkit-border-radius: 0;
+border-radius: 0;
+font: normal 70px/1 "Times New Roman", Times, serif;
+color: rgba(12,174,249,1);
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+background: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+text-shadow: none;
+-webkit-transition: none;
+-moz-transition: none;
+-o-transition: none;
+transition: none;
+-webkit-transform: none;
+transform: none;
+-webkit-transform-origin: 50% 50% 0;
+transform-origin: 50% 50% 0;
 }
