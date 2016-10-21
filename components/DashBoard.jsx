@@ -3,7 +3,7 @@ import React from 'react'
 var DashBoard = React.createClass({
 	render : function(){
 		return (
-				<div>DashBoard</div>
+				<div><h1>DashBoard</h1></div>
 			)
 	}
 
