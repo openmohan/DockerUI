@@ -14,9 +14,9 @@ var DashBoard = React.createClass({
 	,
 	render : function(){
 		var state = store.getState();
-		var dockerps = state.docker.dockerps
+		var dockerps = state.docker.dockerps || " "
 		return (
-				<div><h1>{dockerps}</h1></div>
+				<div><h1>{dockerps.OperatingSystem || dockerps }</h1></div>
 			)
 	}
 

@@ -4,12 +4,14 @@ import DashBoard from './components/DashBoard.jsx'
 import Containers from './components/Containers.jsx'
 var Menu = require('react-burger-menu').push;
 import { connect } from 'react-redux'
-import {test}  from './actions/actions'
+import {test,getDockerProcess}  from './actions/actions'
 import store from './configureStore.js'
 
 const Stores=store()
 var App = React.createClass({
-	componentDidMount: function() {
+	componentWillMount: function() {
+				Stores.dispatch(getDockerProcess())
+
 	},
 	render: function(){
 		const {dispatch,test} = this.props
