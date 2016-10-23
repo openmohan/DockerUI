@@ -23,6 +23,7 @@
     "file-system": "^2.2.1",
     "fs": "0.0.1-security",
     "isomorphic-fetch": "^2.2.1",
+    "jquery": "^3.1.1",
     "react": "^15.3.2",
     "react-burger-menu": "^1.10.8",
     "react-dom": "^15.3.2",

@@ -5,36 +5,35 @@ import Containers from './components/Containers.jsx'
 var Menu = require('react-burger-menu').push;
 import { connect } from 'react-redux'
 import {test,getDockerProcess}  from './actions/actions'
-import store from './configureStore.js'
+import stores from './configureStore.js'
 
-const Stores=store()
+
 var App = React.createClass({
-	componentWillMount: function() {
-				Stores.dispatch(getDockerProcess())
-
+	componentDidMount : function(){
+		
 	},
 	render: function(){
 		const {dispatch,test} = this.props
-		console.log(test)
 		return(
-			<div id="nav">
-			<Menu pageWrapId={"page-wrap"} outerContainerId={"nav"}>
+			<div id="navl">
+			<Menu pageWrapId={"page-wraps"} outerContainerId={"navl"}>
 
-				<div><Link className="menu-item"  to="/">DashBoard</Link></div>
-				<div><Link className="menu-item"  to="/Containers">Containers</Link></div>
+				<div><Link className="menu-item blue-Highligher"  to="/"><i className="glyphicon glyphicon-dashboard "></i><span className="icon-title-Seperator">DashBoard</span></Link></div>
+				<div><Link className="menu-item blue-Highligher"  to="/Containers"><i className="	glyphicon glyphicon-equalizer "></i><span className="icon-title-Seperator">Containers</span></Link></div>
 			</Menu>
-			<div id="page-wrap">
-			<div id="title" className="title-top">Docker Manager</div>
-				{this.props.children}
+			<div id="page-wraps" className="AppBackgroundColor">
+			<div id="docker-title" className="docker-title-top">Docker Manager</div>
+				{this.props.children && React.cloneElement(this.props.children,{data: this.props , dispatch:dispatch  }) }
 			</div>
 			</div>
 		)
 	}
 })
 
-function select(state){
+function select(State){
 	return {
-		test : state.arithmetic.test
+		test : State.arithmetic.test,
+		dockerps : State.docker.dockerps
 	}
 }
 

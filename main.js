@@ -15,9 +15,10 @@ ReactDOM.render(
 			<Provider store={store}>
 				<Router history={browserHistory}>
 					<Route path='/' component={App}>
-					         <IndexRoute component = {DashBoard} />
-
+					         <IndexRoute  component = {DashBoard} />
          			<Route path = 'DashBoard' component = {DashBoard} />
+         			
+
          			<Route path = 'Containers' component = {Containers} />
 					</Route>
 				</Router>
