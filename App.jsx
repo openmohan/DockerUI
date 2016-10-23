@@ -10,18 +10,17 @@ import stores from './configureStore.js'
 
 var App = React.createClass({
 	componentDidMount : function(){
-		
 	},
 	render: function(){
 		const {dispatch,test} = this.props
 		return(
-			<div id="navl">
+			<div id="navl " className="height-100">
 			<Menu pageWrapId={"page-wraps"} outerContainerId={"navl"}>
 
 				<div><Link className="menu-item blue-Highligher"  to="/"><i className="glyphicon glyphicon-dashboard "></i><span className="icon-title-Seperator">DashBoard</span></Link></div>
 				<div><Link className="menu-item blue-Highligher"  to="/Containers"><i className="	glyphicon glyphicon-equalizer "></i><span className="icon-title-Seperator">Containers</span></Link></div>
 			</Menu>
-			<div id="page-wraps" className="AppBackgroundColor">
+			<div id="page-wraps" className="AppBackgroundColor height-100">
 			<div id="docker-title" className="docker-title-top">Docker Manager</div>
 				{this.props.children && React.cloneElement(this.props.children,{data: this.props , dispatch:dispatch  }) }
 			</div>
@@ -33,7 +32,8 @@ var App = React.createClass({
 function select(State){
 	return {
 		test : State.arithmetic.test,
-		dockerps : State.docker.dockerps
+		dockerps : State.docker.dockerps,
+		dockerimages:State.docker.dockerimages
 	}
 }
 
