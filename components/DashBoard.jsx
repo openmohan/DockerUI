@@ -6,7 +6,6 @@ import DockerPSContainer from './DockerPSContainer.jsx'
 
 
 const store=rawStore()
-var intervalState;
 var DashBoard = React.createClass({
 	componentWillMount : function(){
 		
@@ -19,9 +18,10 @@ var DashBoard = React.createClass({
 				this.props.dispatch(getDockerImages())
 			},
 			componentDidMount : function(){
-				reactiveDashboard = setInterval(this.reactiveDashboard,100)
+				reactiveDashboard = setInterval(this.reactiveDashboard,1000)
 			},
 			componentWillUnmount : function(){
+				console.log("ss")
 				clearInterval(reactiveDashboard)
 			}
 			,

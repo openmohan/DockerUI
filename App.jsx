@@ -14,8 +14,8 @@ var App = React.createClass({
 	render: function(){
 		const {dispatch,test} = this.props
 		return(
-			<div id="navl " className="height-100">
-			<Menu pageWrapId={"page-wraps"} outerContainerId={"navl"}>
+			<div id="nav " className="height-100">
+			<Menu pageWrapId={"page-wraps"} outerContainerId={"nav"}>
 
 				<div><Link className="menu-item blue-Highligher"  to="/"><i className="glyphicon glyphicon-dashboard "></i><span className="icon-title-Seperator">DashBoard</span></Link></div>
 				<div><Link className="menu-item blue-Highligher"  to="/Containers"><i className="	glyphicon glyphicon-equalizer "></i><span className="icon-title-Seperator">Containers</span></Link></div>
