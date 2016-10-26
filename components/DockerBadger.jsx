@@ -4,7 +4,7 @@ var DockerBadger = React.createClass({
 	render : function(){
 		return(
 
-			<div style={{"marginTop": "18%"}}>
+			<div style={{"marginTop": "18%","fontSize" : "166px"}}>
 	
 			{this.props.data}
 			

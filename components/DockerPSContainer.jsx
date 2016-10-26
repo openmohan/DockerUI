@@ -12,7 +12,7 @@ componentDidMount(){
 		const dockerPSData = this.props.data 
 		//console.log(dockerPSData.length)
 		return(
-			<div className="height-100">			
+			<div className="height-100" >			
 				<div className="widget-background">
 				
 						{this.props.name}
