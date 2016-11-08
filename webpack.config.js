@@ -9,18 +9,18 @@ var config = {
 devServer: {
    port: 8090,
    // Send API requests on localhost to API server get around CORS.
-   proxy: {
-      '/api': {
-         target: {
-            host: "10.203.63.242",
-            protocol: 'http:',
-            port: 2375
-         },
-         pathRewrite: {
-            '^/api': ''
-         }
-      }
-   }
+   // proxy: {
+   //    '/api': {
+   //       target: {
+   //          host: "10.203.63.242",
+   //          protocol: 'http:',
+   //          port: 2375
+   //       },
+   //       pathRewrite: {
+   //          '^/api': ''
+   //       }
+   //    }
+   // }
 },
 	
    module: {

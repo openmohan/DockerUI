@@ -18,7 +18,7 @@ var DashBoard = React.createClass({
 				this.props.dispatch(getDockerImages())
 			},
 			componentDidMount : function(){
-				reactiveDashboard = setInterval(this.reactiveDashboard,1000)
+				// reactiveDashboard = setInterval(this.reactiveDashboard,1000)
 			},
 			componentWillUnmount : function(){
 				console.log("ss")

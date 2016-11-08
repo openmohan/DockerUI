@@ -4,7 +4,7 @@ export const TEST = "TEST"
 export const DOCKERPSCONST = "DOCKERPS"
 export const DOCKERIMAGESCONST = "DOCKERIMAGES"
 
- const URL = "http://10.203.63.242:2375/api"
+ const URL = "http://localhost:8085"
 /*
 import docker from 'docker-remote-api'
 var request = docker({
@@ -36,16 +36,18 @@ export function DOCKERIMAGESACTION(json){
 
 export function getDockerProcess(){
 		return dispatch => {
-	return fetch('/api/containers/json',{method:'GET',mode:'no-cors','Access-Control-Allow-Origin': '*','Access-Control-Request-Headers': '*','Content-Type' : 'Application/json; charset=UTF-8'})
-	.then(response=>response.json()).then(json=>dispatch(DOCKERPSACTION(json)))
+	return fetch(URL+'/getContainers')
+	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERPSACTION(json)))
 }
 
 }
 
 export function getDockerImages(){
 		return dispatch => {
-	return fetch('/api/images/json',{method:'GET',mode:'no-cors','Access-Control-Allow-Origin': '*','Access-Control-Request-Headers': '*','Content-Type' : 'Application/json; charset=UTF-8'})
-	.then(response=>response.json()).then(json=>dispatch(DOCKERIMAGESACTION(json)))
+	return fetch(URL+'/getInfo',{method:'GET',headers:{'Access-Control-Request-Headers': '*','Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}})
+	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERIMAGESACTION(json)))
+	// return fetch(URL+'/getNames',{method:'GET',headers:{'Access-Control-Request-Headers': '*','Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}}).then(response=>response.json()).then(json=>dispatch(updateNames(json)))
+
 }
 
 }
