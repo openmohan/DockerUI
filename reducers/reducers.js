@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import {TEST,DOCKERPSCONST,DOCKERIMAGESCONST,DOCKERINFOCONST} from '../actions/actions'
+import {TEST,DOCKERPSCONST,DOCKERIMAGESCONST,DOCKERINFOCONST,DOCKERSERVICESCONST} from '../actions/actions'
 import {getDockerProcess} from '../actions/actions'
 
 function arithmetic(state={},action){
@@ -21,6 +21,9 @@ function docker(state={},action){
 		})
 		case DOCKERINFOCONST : return Object.assign({},state,{
 			dockerinfo:action.data
+		})		
+		case DOCKERSERVICESCONST : return Object.assign({},state,{
+			dockerservices:action.data
 		})
 		default : return state
 	}

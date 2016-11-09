@@ -4,6 +4,7 @@ export const TEST = "TEST"
 export const DOCKERPSCONST = "DOCKERPS"
 export const DOCKERIMAGESCONST = "DOCKERIMAGES"
 export const DOCKERINFOCONST = "DOCKERINFO"
+export const DOCKERSERVICESCONST = "DOCKERSERVICE"
  const URL = "http://localhost:8085"
 /*
 import docker from 'docker-remote-api'
@@ -41,6 +42,13 @@ export function DOCKERINFOACTION(json){
 	}
 }
 
+export function DOCKERSERVICEINFOACTION(json){
+	return {
+		type : DOCKERSERVICESCONST,
+		data : json
+	}
+}
+
 export function getDockerProcess(){
 		return dispatch => {
 	return fetch(URL+'/getContainers')
@@ -60,5 +68,11 @@ export function getDockerInfo(){
 		return dispatch => {
 	return fetch(URL+'/getInfo')
 	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERINFOACTION(json)))
+}
+}
+export function getDockerServiceInfo(){
+		return dispatch => {
+	return fetch(URL+'/getSwarmService')
+	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERSERVICEINFOACTION(json)))
 }
 }
