@@ -3,7 +3,7 @@ import fetch from 'isomorphic-fetch'
 export const TEST = "TEST"
 export const DOCKERPSCONST = "DOCKERPS"
 export const DOCKERIMAGESCONST = "DOCKERIMAGES"
-
+export const DOCKERINFOCONST = "DOCKERINFO"
  const URL = "http://localhost:8085"
 /*
 import docker from 'docker-remote-api'
@@ -34,20 +34,31 @@ export function DOCKERIMAGESACTION(json){
 	}
 }
 
+export function DOCKERINFOACTION(json){
+	return {
+		type : DOCKERINFOCONST,
+		data : json
+	}
+}
+
 export function getDockerProcess(){
 		return dispatch => {
 	return fetch(URL+'/getContainers')
 	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERPSACTION(json)))
-}
-
+	}
 }
 
 export function getDockerImages(){
 		return dispatch => {
-	return fetch(URL+'/getInfo',{method:'GET',headers:{'Access-Control-Request-Headers': '*','Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}})
+	return fetch(URL+'/getImages')
 	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERIMAGESACTION(json)))
 	// return fetch(URL+'/getNames',{method:'GET',headers:{'Access-Control-Request-Headers': '*','Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}}).then(response=>response.json()).then(json=>dispatch(updateNames(json)))
 
+	}
 }
-
+export function getDockerInfo(){
+		return dispatch => {
+	return fetch(URL+'/getInfo')
+	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERINFOACTION(json)))
+}
 }

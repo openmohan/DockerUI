@@ -33,7 +33,8 @@ function select(State){
 	return {
 		test : State.arithmetic.test,
 		dockerps : State.docker.dockerps,
-		dockerimages:State.docker.dockerimages
+		dockerimages:State.docker.dockerimages,
+		dockerinfo:State.docker.dockerinfo
 	}
 }
 
