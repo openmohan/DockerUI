@@ -4,6 +4,8 @@ import rawStore from '../configureStore.js'
 import { connect } from 'react-redux'
 import DockerPSContainer from './DockerPSContainer.jsx'
 import DockerInfoContainer from './DockerInfoContainer.jsx'
+import DockerNodeContainer from './DockerNodeContainer.jsx'
+import DockerGeneralContainer from './DockerGeneralContainer.jsx'
 
 
 const store=rawStore()
@@ -37,8 +39,8 @@ var DashBoard = React.createClass({
 				<div className="container height-100 width-100 ">
 				<div className="row margin-align height-50">
 				<div className="col-md-4 margin-top-25 height-100"><DockerInfoContainer  name="Containers"  data={dockerinfo} ></DockerInfoContainer></div>
-				<div className="col-md-4 margin-top-25 height-100"><DockerPSContainer name="Docker Process"  data={dockerPSdata} ></DockerPSContainer></div>
-				<div className="col-md-4 margin-top-25 height-100"><DockerPSContainer name="Images" dispatch={this.props.dispatch} data={dockerImagesData} ></DockerPSContainer></div>
+				<div className="col-md-4 margin-top-25 height-100"><DockerNodeContainer name="Nodes"  data={dockerinfo} ></DockerNodeContainer></div>
+				<div className="col-md-4 margin-top-25 height-100"><DockerGeneralContainer name="Info" dispatch={this.props.dispatch} data={dockerinfo} ></DockerGeneralContainer></div>
 
 
 				</div>

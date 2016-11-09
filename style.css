@@ -150,7 +150,7 @@ overflow: hidden;
 border: none;
 -webkit-border-radius: 0;
 border-radius: 0;
-font: normal 50px/0 Verdana, Geneva, sans-serif;
+font: normal 50px/0 "Trebuchet MS", Helvetica, sans-serif;
 color: rgba(255,255,255,1);
 text-align: center;
 text-indent: -3px;
@@ -170,6 +170,7 @@ transition: none;
 transform: none;
 -webkit-transform-origin: 50% 50% 0;
 transform-origin: 50% 50% 0;
+
 }
 .dockerPSContainer{
   width:25%;
@@ -272,6 +273,41 @@ border: none;
 -webkit-border-radius: 0;
 border-radius: 0;
 font: normal normal bold 33px/1 "Trebuchet MS", Helvetica, sans-serif;
+color: rgba(255,255,255,1);
+-o-text-overflow: ellipsis;
+text-overflow: ellipsis;
+background: none;
+-webkit-box-shadow: none;
+box-shadow: none;
+text-shadow: none;
+-webkit-transition: none;
+-moz-transition: none;
+-o-transition: none;
+transition: none;
+-webkit-transform: none;
+transform: none;
+-webkit-transform-origin: 50% 50% 0;
+transform-origin: 50% 50% 0;
+}
+.widgetDataText {
+  display: inline-block;
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+float: none;
+z-index: auto;
+width: auto;
+height: auto;
+position: static;
+cursor: default;
+opacity: 1;
+margin: 0;
+padding: 0;
+overflow: visible;
+border: none;
+-webkit-border-radius: 0;
+border-radius: 0;
+font: normal normal  24px/1 "Trebuchet MS", Helvetica, sans-serif;
 color: rgba(255,255,255,1);
 -o-text-overflow: ellipsis;
 text-overflow: ellipsis;
