@@ -18,7 +18,7 @@ componentDidMount(){
 						<div className="widgetHeading">{this.props.name}</div>
 						<table className="widgetTable">
 						<tbody>
-						<tr><td><div className="widgetTextLabel">Name</div></td><td><div className="widgetDataNumber">{ ""}</div></td></tr>
+						<tr><td><div className="widgetTextLabel">Number of Services</div></td><td><div className="widgetDataNumber">{this.props.data.length}</div></td></tr>
 						</tbody>
 						</table>
 

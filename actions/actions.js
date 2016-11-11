@@ -5,7 +5,7 @@ export const DOCKERPSCONST = "DOCKERPS"
 export const DOCKERIMAGESCONST = "DOCKERIMAGES"
 export const DOCKERINFOCONST = "DOCKERINFO"
 export const DOCKERSERVICESCONST = "DOCKERSERVICE"
- const URL = "http://localhost:8085"
+const URL = "http://localhost:8085"
 /*
 import docker from 'docker-remote-api'
 var request = docker({
@@ -50,29 +50,29 @@ export function DOCKERSERVICEINFOACTION(json){
 }
 
 export function getDockerProcess(){
-		return dispatch => {
-	return fetch(URL+'/getContainers')
-	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERPSACTION(json)))
+	return dispatch => {
+		return fetch(URL+'/getContainers')
+		.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERPSACTION(json)))
 	}
 }
 
 export function getDockerImages(){
-		return dispatch => {
-	return fetch(URL+'/getImages')
-	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERIMAGESACTION(json)))
+	return dispatch => {
+		return fetch(URL+'/getImages')
+		.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERIMAGESACTION(json)))
 	// return fetch(URL+'/getNames',{method:'GET',headers:{'Access-Control-Request-Headers': '*','Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'}}).then(response=>response.json()).then(json=>dispatch(updateNames(json)))
 
-	}
+}
 }
 export function getDockerInfo(){
-		return dispatch => {
-	return fetch(URL+'/getInfo')
-	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERINFOACTION(json)))
-}
+	return dispatch => {
+		return fetch(URL+'/getInfo')
+		.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERINFOACTION(json)))
+	}
 }
 export function getDockerServiceInfo(){
-		return dispatch => {
-	return fetch(URL+'/getSwarmService')
-	.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERSERVICEINFOACTION(json)))
-}
+	return dispatch => {
+		return fetch(URL+'/getSwarmService')
+		.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERSERVICEINFOACTION(json)))
+	}
 }
