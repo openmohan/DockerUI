@@ -7,6 +7,8 @@ import DockerInfoContainer from './DockerInfoContainer.jsx'
 import DockerNodeContainer from './DockerNodeContainer.jsx'
 import DockerGeneralContainer from './DockerGeneralContainer.jsx'
 import DockerServiceContainer from './DockerServiceContainer.jsx'
+import DockerDashBoardChart from './DockerDashBoardChart.jsx'
+
 
 
 const store=rawStore()
@@ -46,11 +48,11 @@ var DashBoard = React.createClass({
 				<div className="col-md-4 margin-top-25 height-100"><DockerGeneralContainer name="Info" dispatch={this.props.dispatch} data={dockerinfo} ></DockerGeneralContainer></div>
 
 
-				</div>
+				</div> 
 				<div className="row margin-align height-50 ">
 				<div className="col-md-4 margin-top-25 height-100"><DockerServiceContainer  name="Swarms"  data={dockerservices} ></DockerServiceContainer></div>
-				<div className="col-md-4 margin-top-25 height-100"><DockerPSContainer   data={dockerPSdata} ></DockerPSContainer></div>
-				<div className="col-md-4 margin-top-25 height-100"><DockerPSContainer   data={dockerPSdata} ></DockerPSContainer></div>
+				<div className="col-md-4 margin-top-25 "><DockerDashBoardChart   data={dockerPSdata} ></DockerDashBoardChart></div>
+				<div className="col-md-4 margin-top-25 height-100"><DockerDashBoardChart   data={dockerPSdata} ></DockerDashBoardChart></div>
 
 				</div>
 

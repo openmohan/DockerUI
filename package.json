@@ -19,13 +19,17 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
     "babel-preset-react": "^6.16.0",
+    "bootstrap": "^3.3.7",
+    "chart.js": "^1.1.1",
     "docker-remote-api": "^4.4.1",
     "file-system": "^2.2.1",
     "fs": "0.0.1-security",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.1.1",
     "react": "^15.3.2",
+    "react-bootstrap": "^0.30.6",
     "react-burger-menu": "^1.10.8",
+    "react-chartjs": "^0.8.0",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
@@ -34,5 +38,9 @@
     "redux-thunk": "^2.1.0",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
+  },
+  "engines": {
+    "node": "0.10.33",
+    "npm": "2.1.35"
   }
 }
