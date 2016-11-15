@@ -35,7 +35,8 @@ function select(State){
 		dockerps : State.docker.dockerps,
 		dockerimages:State.docker.dockerimages,
 		dockerinfo:State.docker.dockerinfo,
-		dockerservices:State.docker.dockerservices
+		dockerservices:State.docker.dockerservices,
+		dockerdashboardchart : State.docker.dockerdashboardchart
 	}
 }
 

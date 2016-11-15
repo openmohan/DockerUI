@@ -5,6 +5,7 @@ export const DOCKERPSCONST = "DOCKERPS"
 export const DOCKERIMAGESCONST = "DOCKERIMAGES"
 export const DOCKERINFOCONST = "DOCKERINFO"
 export const DOCKERSERVICESCONST = "DOCKERSERVICE"
+export const DOCKERDASHBOARDCHARTCONST = "DOCKERDASHBOARDCHART"
 const URL = "http://localhost:8085"
 /*
 import docker from 'docker-remote-api'
@@ -48,6 +49,12 @@ export function DOCKERSERVICEINFOACTION(json){
 		data : json
 	}
 }
+export function DOCKERDASHBOARDCHARTACTION(json){
+	return {
+		type : DOCKERDASHBOARDCHARTCONST,
+		data : json
+	}
+}
 
 export function getDockerProcess(){
 	return dispatch => {
@@ -74,5 +81,11 @@ export function getDockerServiceInfo(){
 	return dispatch => {
 		return fetch(URL+'/getSwarmService')
 		.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERSERVICEINFOACTION(json)))
+	}
+}
+export function getDashBoardKPIData(){
+	return dispatch => {
+		return fetch(URL+'/getDashBoardKPI')
+		.then(response=>{console.log(response);return response.json();}).then(json=>dispatch(DOCKERDASHBOARDCHARTACTION(json)))
 	}
 }

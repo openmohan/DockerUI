@@ -1,5 +1,5 @@
 import React from 'react'
-import {test,getDockerProcess,getDockerImages,getDockerInfo,getDockerServiceInfo} from '../actions/actions'
+import {test,getDockerProcess,getDockerImages,getDockerInfo,getDockerServiceInfo,getDashBoardKPIData} from '../actions/actions'
 import rawStore from '../configureStore.js'
 import { connect } from 'react-redux'
 import DockerPSContainer from './DockerPSContainer.jsx'
@@ -19,6 +19,7 @@ var DashBoard = React.createClass({
 		this.props.dispatch(getDockerImages())
 		this.props.dispatch(getDockerInfo())
 		this.props.dispatch(getDockerServiceInfo())
+		this.props.dispatch(getDashBoardKPIData())
 
 			},
 			 reactiveDashboard :function(){
@@ -37,6 +38,7 @@ var DashBoard = React.createClass({
 				var dockerImagesData = this.props.data.dockerimages || ""
 				var dockerinfo = this.props.data.dockerinfo || ""
 				var dockerservices = this.props.data.dockerservices || "" 
+				var dockerdashboardchartdata = this.props.data.dockerdashboardchart || ""
 				console.log(dockerinfo)
 				// setTimeout(function(){var datas = store.getState();console.log(datas)},2000)
 
