@@ -53,8 +53,8 @@ var DashBoard = React.createClass({
 				</div> 
 				<div className="row margin-align height-50 ">
 				<div className="col-md-4 margin-top-25 height-100"><DockerServiceContainer  name="Swarms"  data={dockerservices} ></DockerServiceContainer></div>
-				<div className="col-md-4 margin-top-25 "><DockerDashBoardChart   data={dockerPSdata} ></DockerDashBoardChart></div>
-				<div className="col-md-4 margin-top-25 height-100"><DockerDashBoardChart   data={dockerPSdata} ></DockerDashBoardChart></div>
+				<div className="col-md-4 margin-top-25 height-100"><DockerDashBoardChart   data={dockerdashboardchartdata} ></DockerDashBoardChart></div>
+				<div className="col-md-4 margin-top-25 height-100"><DockerDashBoardChart   data={dockerdashboardchartdata} ></DockerDashBoardChart></div>
 
 				</div>
 
