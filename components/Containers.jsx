@@ -1,9 +1,11 @@
 import React from 'react'
-
+import DockerContainerList from './DockerContainerList.jsx'
 var Containers = React.createClass({
 	render : function(){
 		return (
-				<div><h1>Containersss</h1></div>
+			<div>
+				<DockerContainerList></DockerContainerList>
+			</div>
 			)
 	}
 

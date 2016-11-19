@@ -3,7 +3,7 @@ import {HorizontalBar} from 'react-chartjs-2';
 
 	var random = function(){ return Math.round(Math.random()*95)};
 
-var DockerDashBoardChart = React.createClass({
+var DockerTxUtilization = React.createClass({
 	render : function(){
 		var labels = [];
 		var dataSet = [];
@@ -14,8 +14,8 @@ var DockerDashBoardChart = React.createClass({
 			var lab = data.containerID.Id;
 			lab = lab.slice(0,5)
 			labels.push(lab);
-			chartcontentdata.push(data.networks.rx_bytes);
-			datasetsingle = {label : lab,data :data.networks.rx_bytes }
+			chartcontentdata.push(data.networks.tx_bytes);
+			datasetsingle = {label : lab,data :data.networks.tx_bytes }
 			dataSet.push(datasetsingle);
 		})
 
@@ -23,7 +23,7 @@ var DockerDashBoardChart = React.createClass({
 		  labels: labels,
 		  datasets: [
 		    {
-		      label: 'Network Rx Utilization',
+		      label: 'Network Tx Utilization',
 		      backgroundColor: '#89C4F4',
 		      borderColor: '#4183D7',
 		      borderWidth: 1,
@@ -47,11 +47,10 @@ var DockerDashBoardChart = React.createClass({
 
 		   }
 		return(
-
-			<HorizontalBar data={BarChartdata} options={chartOptions} />		
 		
+			<HorizontalBar data={BarChartdata} options={chartOptions} />			
 			) 
 	}
 })
 
-export default DockerDashBoardChart; 
+export default DockerTxUtilization; 
