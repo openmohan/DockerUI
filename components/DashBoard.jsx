@@ -9,6 +9,7 @@ import DockerGeneralContainer from './DockerGeneralContainer.jsx'
 import DockerServiceContainer from './DockerServiceContainer.jsx'
 import DockerDashBoardChart from './DockerDashBoardChart.jsx'
 import DockerTxUtilization from './DockerTxUtilization.jsx'
+import DockerCPUPie from './DockerCPUPie.jsx'
 
 
 
@@ -51,9 +52,11 @@ var DashBoard = React.createClass({
 				<div className="col-md-4 margin-top-25 height-100"><DockerGeneralContainer name="Info" dispatch={this.props.dispatch} data={dockerinfo} ></DockerGeneralContainer></div>
 
 
+
 				</div> 
 				<div className="row margin-align height-50 ">
-				<div className="col-md-4 margin-top-25 height-100"><DockerServiceContainer  name="Swarms"  data={dockerservices} ></DockerServiceContainer></div>
+				<div className="col-md-4 margin-top-25 height-100"><DockerCPUPie   data={dockerdashboardchartdata}></DockerCPUPie></div>
+
 				<div className="col-md-4 margin-top-25 height-100"><DockerDashBoardChart   data={dockerdashboardchartdata} ></DockerDashBoardChart></div>
 				<div className="col-md-4 margin-top-25 height-100"><DockerTxUtilization   data={dockerdashboardchartdata} ></DockerTxUtilization></div>
 
