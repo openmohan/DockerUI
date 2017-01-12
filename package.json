@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --hot --host 0.0.0.0 --port 8090 "
+    "start": "webpack-dev-server --hot  "
   },
   "keywords": [
     "Docker",
@@ -23,13 +23,19 @@
     "chart.js": "^1.1.1",
     "docker-remote-api": "^4.4.1",
     "file-system": "^2.2.1",
+    "fixed-data-table": "^0.6.3",
     "fs": "0.0.1-security",
     "isomorphic-fetch": "^2.2.1",
     "jquery": "^3.1.1",
+    "randomcolor": "^0.4.4",
+    "rc-collapse": "^1.6.10",
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.6",
+    "react-bootstrap-table": "^2.9.0",
     "react-burger-menu": "^1.10.8",
     "react-chartjs": "^0.8.0",
+    "react-chartjs-2": "^1.5.1",
+    "react-d3-basic": "^1.6.11",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.8.1",
