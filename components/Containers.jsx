@@ -4,15 +4,6 @@ import {connect} from 'react-redux';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 
 
-var products = [{
-      id: 1,
-      name: "Product1",
-      price: 120
-  }, {
-      id: 2,
-      name: "Product2",
-      price: 80
-  }];
 
 var Containers = React.createClass({
 	render : function(){
